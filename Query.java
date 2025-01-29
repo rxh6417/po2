@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Query{
     public static void main(String [] args){
         Engine x = null;
@@ -8,9 +10,9 @@ public class Query{
             return;
         }
         
-        String input = args[0].toLowercase();
+        String input = args[0].toLowerCase();
         if(input.equals("waldo")){
-            x = Engine.valueof(input);
+            x = Engine.valueOf(input);
             
         }
         
@@ -25,15 +27,15 @@ public class Query{
             
         }
         System.out.println("History");
-        for(String query : bot.getQuery()){
+        for(String query : bot.getQueryHistory()){
             if(query != null){
-                System.out.prinln(query);
+                System.out.println(query);
                 
             }
             
         }
         
-        Scanner.close();
+        say.close();
         
     }
     
